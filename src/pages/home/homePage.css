@@ -1,0 +1,185 @@
+.homePage {
+  background-color: #fff;
+}
+
+.hero_info {
+  background: url(../../../public/images/hero_background.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: flex-start;
+  padding: 10vh;
+  position: relative;
+  height: 100vh;
+}
+.hero_info .info {
+  width: 60%;
+  text-align: left;
+}
+.hero_info .info p {
+  color: #a0aab6;
+}
+.hero_info .info h1 {
+  color: #000000;
+}
+
+.hero_info .hero_image {
+  width: 30%;
+  height: 80vh;
+  display: flex;
+  justify-content: flex-start;
+  top: 0;
+  right: 0;
+  transform: translateX(-50%);
+  animation: move-down 8s ease forwards infinite;
+  position: absolute;
+}
+@keyframes move-down {
+  0% {
+    top: 10vh;
+    opacity: 1;
+  }
+  25% {
+    top: calc(50% - 135px);
+    opacity: 0;
+  }
+  50% {
+    top: calc(-50% + 135px);
+    opacity: 0;
+  }
+  100% {
+    top: 10vh;
+    opacity: 1;
+  }
+}
+
+.serviceSection {
+  height: 100vh;
+  padding: 15vh 0;
+}
+
+.items {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.service {
+  width: 30%;
+  padding: 3%;
+  text-align: center;
+  border-radius: 5%;
+  transition: 1s;
+  box-shadow: none;
+}
+
+.service .serviceInfo h3 {
+  font-size: 15px;
+  font-weight: bold;
+}
+.service .serviceInfo p {
+  font-size: 12px;
+  color: #a0aab6;
+}
+.read-btn {
+  text-decoration: none;
+  background-color: blue;
+  color: #fff;
+  padding: 10px 22px;
+  border-radius: 30px;
+  font-size: 12px;
+  border: 6px solid rgba(204, 241, 255, 0.5);
+  background-image: linear-gradient(
+    to right,
+    #6fbcfe 0%,
+    #998dff 51%,
+    #6fbcfe 100%
+  );
+}
+
+.service .read-btn {
+  opacity: 0;
+  transition: 1s;
+}
+.service:hover {
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+}
+.service:hover .read-btn {
+  opacity: 1;
+  background-image: linear-gradient(
+    to right,
+    #998dff 0%,
+    #6fbcfe 51%,
+    #998dff 100%
+  );
+}
+.vision_section {
+  height: 90vh;
+  padding: 5vh 0;
+}
+.vision_section .bio {
+  background-image: url(../images/3d-slider-shap.png.webp);
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 100%;
+  width: 40%;
+  position: relative;
+}
+.vision_section .bio .info {
+  position: absolute;
+  top: 160px;
+  left: 50px;
+  width: 50%;
+}
+.vision_section .bio .info h5 {
+  font-size: 15px;
+  color: #ffffff;
+}
+.vision_section .bio .info p {
+  font-size: 10px;
+  color: #ffffff;
+}
+
+.vision_section .disc {
+  width: 25%;
+}
+
+.vision_section .disc span {
+  font-size: 10px;
+  color: #a0aab6;
+}
+.vision_section .disc p {
+  font-size: 14px;
+  color: #a0aab6;
+}
+
+.disign_section {
+  height: 80vh;
+  padding: 10vh 0;
+}
+
+.disign_section .disign-images {
+  height: 25vh;
+  width: 15vw;
+}
+
+.disign_section .disign-images img {
+  height: 100%;
+  width: 100%;
+  transform:rotateX(0deg);
+  transition: 2s;
+}
+
+.disign_section .disign-images img:hover {
+  animation: rotate 2s linear;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
